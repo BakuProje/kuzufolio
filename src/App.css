@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #0A0E1A;
+    color: #E0F6FF;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated Cyber Grid Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.05) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.05) 2px, transparent 2px),
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    }
+}
+
+/* Cyber Circuit Lines */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0, 153, 204, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Floating Particles Effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-30px) translateX(5px);
+    }
+}
+
+/* Scrollbar styling with cyber theme */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 80px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0E1A;
+    border-left: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00D4FF, #00FF88);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00FF88, #00D4FF);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.7);
+}
+
+/* 3D Effect with cyber glow */
+.effect3d {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.3),
+        0 0 40px rgba(0, 212, 255, 0.1),
+        inset 0 0 20px rgba(0, 212, 255, 0.05);
+    position: relative;
+}
+
+.effect3d::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00D4FF, #00FF88, #00D4FF);
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(10px);
+}
+
+.effect3d:hover {
+    transform: rotateX(5deg) rotateY(-5deg) scale(1.05);
+    box-shadow: 
+        0 0 40px rgba(0, 212, 255, 0.5),
+        0 0 80px rgba(0, 255, 136, 0.3),
+        0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.effect3d:hover::before {
+    opacity: 0.7;
+    animation: rotateBorder 3s linear infinite;
+}
+
+@keyframes rotateBorder {
+    0% {
+        filter: blur(10px) hue-rotate(0deg);
+    }
+    100% {
+        filter: blur(10px) hue-rotate(360deg);
+    }
+}
+
+/* Cyber glow animation */
+@keyframes cyberGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(0, 212, 255, 0.3),
+            0 0 40px rgba(0, 212, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 40px rgba(0, 255, 136, 0.5),
+            0 0 80px rgba(0, 255, 136, 0.2);
+    }
+}
+
+.cyber-glow {
+    animation: cyberGlow 2s ease-in-out infinite;
+}
+
+/* Scan line effect */
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Network nodes animation */
+@keyframes networkPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Glitch effect for text */
+@keyframes glitch {
+    0% {
+        text-shadow: 
+            2px 0 #00D4FF,
+            -2px 0 #00FF88;
+    }
+    25% {
+        text-shadow: 
+            -2px 0 #00D4FF,
+            2px 0 #00FF88;
+    }
+    50% {
+        text-shadow: 
+            2px 0 #00FF88,
+            -2px 0 #00D4FF;
+    }
+    75% {
+        text-shadow: 
+            -2px 0 #00FF88,
+            2px 0 #00D4FF;
+    }
+    100% {
+        text-shadow: 
+            2px 0 #00D4FF,
+            -2px 0 #00FF88;
+    }
+}
+
+/* Data stream effect */
+@keyframes dataStream {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}

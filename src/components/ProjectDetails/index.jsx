@@ -27,6 +27,11 @@ animation: fadeIn 0.3s ease-in-out;
     backdrop-filter: blur(5px);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  align-items: flex-start;
+  padding: 0;
+}
 `;
 
 const Wrapper = styled.div`
@@ -54,6 +59,14 @@ animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+@media only screen and (max-width: 768px) {
+  margin: 0;
+  border-radius: 0;
+  min-height: 100vh;
+  padding: 16px;
+  max-width: 100%;
 }
 `;
 
@@ -97,6 +110,11 @@ const Image = styled.img`
     border-radius: 12px;
     margin-top: 30px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    
+    @media only screen and (max-width: 768px) {
+        margin-top: 50px;
+        border-radius: 8px;
+    }
 `;
 
 const Label = styled.div`
@@ -178,6 +196,12 @@ const ButtonGroup = styled.div`
     justify-content: flex-end;
     margin: 12px 0px;
     gap: 12px;
+    
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0px;
+    }
 `;
 
 const CloseButton = styled(CloseRounded)`
@@ -187,10 +211,20 @@ const CloseButton = styled(CloseRounded)`
     cursor: pointer;
     transition: all 0.3s ease;
     color: ${({ theme }) => theme.text_secondary};
+    z-index: 10;
     
     &:hover {
         color: ${({ theme }) => theme.primary};
         transform: rotate(90deg) scale(1.1);
+    }
+    
+    @media only screen and (max-width: 768px) {
+        top: 16px;
+        right: 16px;
+        font-size: 32px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 4px;
     }
 `;
 
@@ -225,8 +259,10 @@ const Button = styled.a`
             : `linear-gradient(135deg, ${theme.primary}ee, ${theme.primary})`};
     }
     
-    @media only screen and (max-width: 600px) {
-        font-size: 12px;
+    @media only screen and (max-width: 768px) {
+        font-size: 14px;
+        padding: 14px 20px;
+        border-radius: 10px;
     }
 `;
 

@@ -13,11 +13,9 @@ import {
 } from './NavbarStyledComponent';
 import { FaBars } from 'react-icons/fa';
 import { Close } from '@mui/icons-material';
-import { useTheme } from 'styled-components'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme();
 
   return (
     <Nav>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
   background: linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(15, 20, 25, 0.9) 100%);

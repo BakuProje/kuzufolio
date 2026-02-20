@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { skills } from '../../data/constants';
 
@@ -125,7 +125,6 @@ const SkillImage = styled.img`
 // Your existing styled components here
 
 const Skills = () => {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e, index) => {
     const card = document.getElementById(`skill-${index}`);

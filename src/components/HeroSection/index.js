@@ -1,55 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import HeroBgAnimation from '../HeroBgAnimation';
-import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle, ResumeButton } from './HeroStyle';
-import HeroImg from '../../images/logo.png';
+import React from 'react';
+import {
+    HeroContainer,
+    HeroLeftContainer,
+    HeroRightContainer,
+    HeroInnerContainer,
+    Title,
+    TitleBreak,
+    SubTitle,
+    RoleText,
+    ActionButtons,
+    SecondaryButton,
+    IllustrationContainer
+} from './HeroStyle';
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
+import { motion } from 'framer-motion';
+import { MailRounded } from '@mui/icons-material';
 
 const HeroSection = () => {
-    const [isClicked, setIsClicked] = useState(false);
-
-    const handleClick = () => {
-        setIsClicked(!isClicked);
-    };
-
-    useEffect(() => {
-        const card = document.querySelector('.effect3d');
-
-        const handleMouseMove = (e) => {
-            const { offsetX, offsetY, target } = e;
-            const { clientWidth, clientHeight } = target;
-
-            const rotateX = ((offsetY / clientHeight) - 0.5) * 30;
-            const rotateY = ((offsetX / clientWidth) - 0.5) * -30;
-
-            target.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
-        };
-
-        const handleMouseLeave = (e) => {
-            e.target.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
-        };
-
-        card.addEventListener('mousemove', handleMouseMove);
-        card.addEventListener('mouseleave', handleMouseLeave);
-
-        return () => {
-            card.removeEventListener('mousemove', handleMouseMove);
-            card.removeEventListener('mouseleave', handleMouseLeave);
-        };
-    }, []);
-
     return (
-        <div id="about">
+        <div id="home">
             <HeroContainer>
-                <HeroBg>
-                    <HeroBgAnimation />
-                </HeroBg>
                 <HeroInnerContainer>
-                    <HeroLeftContainer id="Left">
-                        <Title>Hi, I am <br /> {Bio.name}</Title>
-                        <TextLoop>
-                            I am 
-                            <Span>
+                    <HeroLeftContainer>
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <Title style={{ marginTop: '12px' }}>
+                                Kuzuroken<TitleBreak />
+                            </Title>
+                            
+                            <RoleText style={{ color: '#006AFF' }}>
                                 <Typewriter
                                     options={{
                                         strings: Bio.roles,
@@ -57,19 +40,31 @@ const HeroSection = () => {
                                         loop: true,
                                     }}
                                 />
-                            </Span>
-                        </TextLoop>
-                        <SubTitle>{Bio.description}</SubTitle>
-                        <ResumeButton href="https://www.tiktok.com/@kuzuroken" target='_blank' rel="noopener noreferrer">My TikTok</ResumeButton>
+                            </RoleText>
+                            
+                            <SubTitle>
+                                {Bio.description || `Menciptakan Website Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital Masa Kini.
+Kami menghadirkan pengalaman digital yang tidak hanya menarik secara visual, tetapi juga dirancang untuk performa optimal dan kemudahan penggunaan. Setiap detail dibuat untuk membantu bisnis Anda berkembang di era digital.`}
+                            </SubTitle>
+                            
+                            <ActionButtons>
+                                <SecondaryButton href="#contact" style={{ background: '#006AFF' }}>
+                                    Contact <MailRounded fontSize="small" />
+                                </SecondaryButton>
+                            </ActionButtons>
+                        </motion.div>
                     </HeroLeftContainer>
 
-                    <HeroRightContainer id="Right">
-                        <Img 
-                            src={HeroImg} 
-                            alt="hero-image" 
-                            onClick={handleClick} 
-                            className={`effect3d ${isClicked ? 'clicked' : ''}`}
-                        />
+                    <HeroRightContainer>
+                        <IllustrationContainer>
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                            >
+                                <img src="/Animation1.gif" alt="Kuzuroken Illustration" />
+                            </motion.div>
+                        </IllustrationContainer>
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>

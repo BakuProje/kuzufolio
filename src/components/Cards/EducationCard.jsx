@@ -35,8 +35,12 @@ text-overflow: ellipsis;
 
 const Card = styled.div`
     width: 650px;
-    border-radius: 10px;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    border-radius: 16px;
+    background: rgba(22, 28, 58, 0.82);
+    border: 1px solid rgba(120, 160, 255, 0.22);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.45),
+      0 0 40px rgba(80, 120, 255, 0.06);
     padding: 12px 16px;
     justify-content: space-between;
     position: relative;
@@ -46,7 +50,9 @@ const Card = styled.div`
     gap: 12px;
     transition: all 0.3s ease-in-out;
     &:hover{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+        box-shadow:
+          0 12px 40px rgba(0, 0, 0, 0.55),
+          0 0 50px rgba(90, 159, 255, 0.1);
         transform: translateY(-5px);
     }
     @media only screen and (max-width: 768px){
@@ -64,7 +70,6 @@ const Card = styled.div`
         -webkit-line-clamp: unset;
 
     }
-    border: 0.1px solid #00D4FF;
 `
 
 const Top = styled.div`

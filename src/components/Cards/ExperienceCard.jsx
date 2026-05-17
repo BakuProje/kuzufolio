@@ -35,38 +35,34 @@ text-overflow: ellipsis;
 
 const Card = styled.div`
     width: 650px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    padding: 12px 16px;
+    border-radius: 30px;
+    background: ${({ theme }) => theme.bgLight};
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(120, 160, 255, 0.12);
+    padding: 20px 24px;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    transition: all 0.3s ease-in-out;
-    &:hover{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-        transform: translateY(-5px);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(120, 160, 255, 0.18);
+
+    &:hover {
+        box-shadow:
+          0 20px 50px rgba(0, 0, 0, 0.55),
+          0 0 50px rgba(90, 159, 255, 0.1);
+        transform: translateY(-8px) scale(1.01);
     }
+    
     @media only screen and (max-width: 768px){
-        padding: 10px;
+        padding: 16px;
         gap: 8px;
         width: 300px;
+        border-radius: 20px;
     }
-
-    &:hover ${Document}{
-        display: flex;
-    }
-
-    &:hover ${Span}{
-        overflow: visible;
-        -webkit-line-clamp: unset;
-
-    }
-
-    border: 0.1px solid #306EE8;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
 
 const Top = styled.div`

@@ -1,231 +1,158 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { FaTiktok, FaInstagram } from 'react-icons/fa';
 
 const FooterContainer = styled.div`
   width: 100%;
-  padding: 3rem 0 1rem 0;
+  padding: 80px 0 40px 0;
   display: flex;
   justify-content: center;
+  background: transparent;
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.8) 50%, rgba(10, 14, 26, 0.95) 100%);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(0, 212, 255, 0.1);
 `;
 
 const FooterWrapper = styled.footer`
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
-  padding: 1rem;
-  color: ${({ theme }) => theme.text_primary};
+  gap: 32px;
+  position: relative;
 `;
 
-const LogoContainer = styled.div`
+const LogoSection = styled(motion.div)`
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 16px;
 `;
 
-const LogoImg = styled.img`
-  width: 50px;
-  height: 50px;
+const LogoImg = styled(motion.img)`
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  box-shadow: 
-    0 0 20px rgba(0, 212, 255, 0.6),
-    0 0 40px rgba(0, 212, 255, 0.3);
-  transition: all 0.3s ease;
-  border: 2px solid ${({ theme }) => theme.primary};
-  
-  &:hover {
-    transform: scale(1.15) rotate(10deg);
-    box-shadow: 
-      0 0 30px rgba(0, 212, 255, 0.8),
-      0 0 60px rgba(0, 212, 255, 0.4);
-  }
+  border: 3px solid rgba(120, 160, 255, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 `;
 
-const Logo = styled.h1`
+const LogoText = styled.h1`
+  font-size: 26px;
   font-weight: 700;
-  font-size: 24px;
-  color: ${({ theme }) => theme.primary};
-  text-shadow: 0 0 15px ${({ theme }) => theme.primary}50;
-  letter-spacing: 1px;
+  color: #E8ECFF;
+  letter-spacing: -0.5px;
 `;
 
 const Nav = styled.nav`
-  width: 100%;
-  max-width: 800px;
-  margin-top: 0.5rem;
   display: flex;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: center;
-  
+  gap: 40px;
   @media (max-width: 768px) {
+    gap: 20px;
     flex-wrap: wrap;
-    gap: 1.5rem;
     justify-content: center;
-    text-align: center;
   }
 `;
 
-const NavLink = styled.a`
-  color: ${({ theme }) => theme.text_secondary};
+const NavLink = styled(motion.a)`
+  color: #A8B4D4;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  padding: 5px 0;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background: ${({ theme }) => theme.primary};
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px ${({ theme }) => theme.primary}80;
-  }
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
   
   &:hover {
-    color: ${({ theme }) => theme.primary};
-    transform: translateY(-2px);
-    
-    &::after {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
+    color: #7AB4FF;
+    background: rgba(0, 106, 255, 0.15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 `;
 
-const SocialMediaIcons = styled.div`
+const SocialIcons = styled.div`
   display: flex;
-  margin-top: 1.5rem;
-  gap: 2rem;
+  gap: 24px;
 `;
 
-const SocialMediaIcon = styled.a`
-  display: inline-block;
+const SocialButton = styled(motion.a)`
   width: 55px;
   height: 55px;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.05));
-  border: 2px solid rgba(0, 212, 255, 0.3);
   border-radius: 50%;
-  color: ${({ theme }) => theme.primary};
-  font-size: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 
-    0 0 15px rgba(0, 212, 255, 0.2),
-    inset 0 0 10px rgba(0, 212, 255, 0.05);
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(0, 212, 255, 0.2);
-    transition: all 0.5s ease;
-    transform: translate(-50%, -50%);
-  }
-  
-  &:hover {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 255, 136, 0.2));
-    border-color: ${({ theme }) => theme.primary};
-    transform: translateY(-8px) scale(1.15);
-    box-shadow: 
-      0 8px 25px rgba(0, 212, 255, 0.5),
-      0 0 40px rgba(0, 212, 255, 0.3),
-      inset 0 0 20px rgba(0, 212, 255, 0.1);
-    color: ${({ theme }) => theme.white};
-    
-    &::before {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
-  }
-`;
-
-const Copyright = styled.p`
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  color: ${({ theme }) => theme.text_secondary};
-  text-align: center;
-  opacity: 0.8;
-  
-  @media (max-width: 768px) {
-    font-size: 0.85rem;
-    margin-top: 1.5rem;
-  }
+  font-size: 24px;
+  color: #7AB4FF;
+  background: rgba(22, 28, 58, 0.85);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(120, 160, 255, 0.2);
+  border: 1px solid rgba(100, 140, 255, 0.25);
 `;
 
 const Divider = styled.div`
   width: 100%;
   max-width: 800px;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(
-    90deg, 
-    transparent, 
-    rgba(0, 212, 255, 0.5) 20%,
-    rgba(0, 212, 255, 0.8) 50%,
-    rgba(0, 212, 255, 0.5) 80%,
+    to right,
+    transparent,
+    rgba(120, 160, 255, 0.35),
     transparent
   );
-  margin: 1.5rem 0;
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  margin: 12px 0;
+`;
+
+const Copyright = styled.p`
+  color: #9BA8D4;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
 `;
 
 function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <LogoContainer>
-          <LogoImg src={require('../../images/logo.png')} alt="Kuzuroken Logo" />
-          <Logo>Kuzuroken</Logo>
-        </LogoContainer>
+        <LogoSection>
+          <LogoImg 
+            src={require('../../images/logo.png')} 
+            alt="Logo"
+            whileHover={{ rotate: 10, scale: 1.1 }}
+          />
+          <LogoText>Kuzuroken</LogoText>
+        </LogoSection>
+
         <Nav>
           <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Info</NavLink>
+          <NavLink href="#stack">Stack</NavLink>
           <NavLink href="#projects">Projects</NavLink>
         </Nav>
-        <Divider />
-        <SocialMediaIcons>
-          <SocialMediaIcon href="https://www.tiktok.com/@kuzuroken" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+
+        <SocialIcons>
+          <SocialButton 
+            href="https://www.tiktok.com/@kuzuroken" 
+            target="_blank"
+            whileHover={{ y: -5, background: "#006AFF", color: "#FFFFFF" }}
+            whileTap={{ scale: 0.9 }}
+          >
             <FaTiktok />
-          </SocialMediaIcon>
-          <SocialMediaIcon href="https://www.instagram.com/kuzuroken.20" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          </SocialButton>
+          <SocialButton 
+            href="https://www.instagram.com/kuzuroken.20" 
+            target="_blank"
+            whileHover={{ y: -5, background: "#006AFF", color: "#FFFFFF" }}
+            whileTap={{ scale: 0.9 }}
+          >
             <FaInstagram />
-          </SocialMediaIcon>
-        </SocialMediaIcons>
+          </SocialButton>
+        </SocialIcons>
+
+        <Divider />
+
         <Copyright>
-          &copy; 2026 Kuzuroken. All rights reserved.
+          &copy; {new Date().getFullYear()} Kuzuroken. All rights reserved.
         </Copyright>
       </FooterWrapper>
     </FooterContainer>

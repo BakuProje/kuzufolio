@@ -1,27 +1,32 @@
-
-
-
-// Dark Theme Configuration - Cyber Blue Theme
+// Dark astronomy theme (langit malam + aksen biru)
 export const darkTheme = {
-    bg: "#0A0E1A", // Deep cyber dark background
-    bgLight: "#0F1419", // Lighter cyber dark background
-    primary: "#00D4FF", // Cyber blue primary color
-    text_primary: "#E0F6FF", // Light cyan text
-    text_secondary: "#8BB8D8", // Secondary blue-gray text
-    card: "#0D1117", // Dark card background
-    card_light: "#161B22", // Light card background
-    button: "#00FF88", // Cyber green button
-    white: "#FFFFFF", // White color
-    black: "#000000", // Black color
-  };
-  
-  // Light Theme Configuration
-  export const lightTheme = {
-    bg: "#FFFFFF", // Main light background color
-    bgLight: "#f0f0f0", // Lighter light background color
-    primary: "#00D4FF", // Cyber blue primary color
-    text_primary: "#111111", // Primary text color
-    text_secondary: "#48494a", // Secondary text color
-    card: "#FFFFFF", // Card background color
-    button: "#00FF88", // Cyber green button
-  };
+  bg: "transparent",
+  bgLight: "rgba(24, 28, 55, 0.78)",
+  primary: "#5A9FFF",
+  text_primary: "#E8ECFF",
+  text_secondary: "#9BA8D4",
+  card: "rgba(22, 28, 58, 0.88)",
+  card_light: "rgba(32, 38, 72, 0.96)",
+  button: "#006AFF",
+  white: "#FFFFFF",
+  black: "#05060f",
+  shadow_outset:
+    "0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(120, 160, 255, 0.14)",
+  shadow_inset: "inset 0 1px 0 rgba(255, 255, 255, 0.06)",
+};
+
+export const lightTheme = {
+  bg: "transparent",
+  bgLight: "rgba(24, 28, 55, 0.78)",
+  primary: "#5A9FFF",
+  text_primary: "#E8ECFF",
+  text_secondary: "#9BA8D4",
+  card: "rgba(22, 28, 58, 0.88)",
+  card_light: "rgba(32, 38, 72, 0.96)",
+  button: "#006AFF",
+  white: "#FFFFFF",
+  black: "#05060f",
+  shadow_outset:
+    "0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(120, 160, 255, 0.14)",
+  shadow_inset: "inset 0 1px 0 rgba(255, 255, 255, 0.06)",
+};

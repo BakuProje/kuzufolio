@@ -1,19 +1,19 @@
 export const Bio = {
   name: "Kuzuroken",
   roles: [
-    "Cyber Security",
-    "Programmer",
-    "Atlet",
-    
+    "Network & Telecom Student",
+    "Tech Enthusiast",
   ],
   description:
-    "",
+    "Crafting secure and scalable digital solutions at the intersection of Cybersecurity and Web Development. Passionate about transforming complex ideas into impactful, user-focused experiences through code.",
+  quote: "“Turning code into secure, scalable, and meaningful digital impact.”",
   github: "https://github.com/Faizbaku",
   resume:
     "https://cdn.discordapp.com/attachments/1264805868701089888/1269713785845715066/About_Baku.mp4?ex=66b5addc&is=66b45c5c&hm=738df9cfdc72b4600b32b22d00051cebb915a382c49470073204f418f33ffc83&",
-    tiktok: "https://www.tiktok.com/@orenni",
+    tiktok: "https://www.tiktok.com/@kuzuroken",
+    telegram: "https://web.telegram.org/@kuzuroken",
     discord: "https://discord.gg/zueqBapJ",
-  insta: "https://www.instagram.com/rishav_chanda/",
+  insta: "https://www.instagram.com/kuzuroken.20",
 };
 
 export const skills = [
@@ -26,18 +26,38 @@ export const skills = [
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
+        name: "TypeScript",
+        image: "https://skillicons.dev/icons?i=ts",
+      },
+      {
         name: "HTML",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       },
       {
         name: "CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
       },
       {
         name: "JavaScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "Next JS",
+        image: "https://skillicons.dev/icons?i=nextjs",
+      },
+      {
+        name: "Tailwind CSS",
+        image: "https://skillicons.dev/icons?i=tailwind",
+      },
+      {
+        name: "Vite",
+        image: "https://skillicons.dev/icons?i=vite",
+      },
+      {
+        name: "Three.js",
+        image: "https://skillicons.dev/icons?i=threejs",
       },
     ],
   },
@@ -70,6 +90,14 @@ export const skills = [
       {
         name: "Firebase",
         image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+      },
+      {
+        name: "Supabase",
+        image: "https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg",
+      },
+      {
+        name: "FlyEnv",
+        image: "https://raw.githubusercontent.com/xpf0000/FlyEnv/master/public/favicon.ico",
       },
     ],
   },
@@ -105,6 +133,10 @@ export const skills = [
         name: "Postman",
         image:
           "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+      },
+      {
+        name: "Vercel",
+        image: "https://skillicons.dev/icons?i=vercel",
       },
     ],
   },
@@ -152,7 +184,7 @@ export const projects = [
     webapp: "https://bio-link-five.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -172,13 +204,13 @@ export const projects = [
       "Sebuah Website Shooping Untuk Usaha",
     image:
       "https://github.com/user-attachments/assets/ff567139-a7f1-4fd4-8a36-07f9a771f614",
-    tags: ["Html", "CSS", "JavaScript"],
+    tags: ["HTML", "CSS", "JavaScript"],
     category: "web app",
     github: "https://github.com/Faizbaku/PS-Gaming",
     webapp: "https://rental-sandy.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -199,16 +231,16 @@ export const projects = [
     image:
       "https://github.com/user-attachments/assets/50e44020-5245-4a74-a8cf-9f8904f5c805",
     tags: [
-      "Html",
+      "HTML",
       "CSS",
-      "JavScript",
+      "JavaScript",
     ],
     category: "web app",
     github: "https://github.com/Faizbaku/music",
     webapp: "https://music-eight-lake.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -228,13 +260,13 @@ export const projects = [
       "Website Music ini Update Dari V1 Bisa Request Music Dan Varian Music Ada Banyak",
     image:
       "https://github.com/user-attachments/assets/97735d9f-2c06-4de9-be0f-392ad70e3728",
-    tags: ["Html", "CSS", "JavaScript", "tailwind"],
+    tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
     category: "Wep app",
     github: "https://github.com/Faizbaku/Kumpulan-Lagu",
     webapp: "https://kumpulan-lagu.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -254,13 +286,13 @@ export const projects = [
       "Clone Dari Zoom Dan Google Meet Bisa Open Camera Dan Banyak Fitur Lain Nya",
     image:
       "https://github.com/user-attachments/assets/472b86af-7eb1-4e0b-9ffb-537b297955a1",
-    tags: ["TypeScript", "tailwind", "NextJS"],
+    tags: ["TypeScript", "Tailwind CSS", "Next JS"],
     category: "web app",
     github: "https://github.com/Faizbaku/MeetKen",
     webapp: "https://meetken-meeting.vercel.app/sign-in?redirect_url=https%3A%2F%2Fmeetken-meeting.vercel.app%2F",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -280,13 +312,13 @@ export const projects = [
       "Sebuah Portofolio 3D Yang Sangat Kece Dan elegan",
     image:
       "https://github.com/user-attachments/assets/10a3ded0-af50-4802-adfe-5e1565a317cc",
-    tags: ["React Jss", "ThreeJS", "tailwind"],
+    tags: ["React Js", "Three.js", "Tailwind CSS"],
     category: "web app",
     github: "https://github.com/Faizbaku/Portofolio-V2/tree/main",
     webapp: "https://portofolio-baku.netlify.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -306,13 +338,13 @@ export const projects = [
       "Di Website Ini Masih Ada Bug Foto",
     image:
       "https://github.com/user-attachments/assets/5c0491ff-05ed-4305-9ac1-a8264cb4457b",
-    tags: ["HTML","CSS", "ThreeJS"],
+    tags: ["HTML","CSS", "Three.js"],
     category: "web app",
     github: "https://github.com/Faizbaku/3D-Website",
     webapp: "https://website-3d-v1.netlify.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -325,20 +357,20 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: "Card Name",
     date: "januari 2024",
     description:
       "Website Pertama Saya Yang Saya Belajar Dan Hasil Copy Paste Di AI",
     image:
       "https://github.com/user-attachments/assets/60e6bce3-87a3-499a-ae02-162524a1a68a",
-    tags: ["HTML", "CSS", "JavaScirpt"],
+    tags: ["HTML", "CSS", "JavaScript"],
     category: "web app",
     github: "https://github.com/Faizbaku/linktree",
     webapp: "https://kartu-six.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -358,13 +390,13 @@ export const projects = [
       "Website Pertama Saya Yang Saya Belajar Dan Hasil Copy Paste Di AI",
     image:
       "https://github.com/user-attachments/assets/501dc216-7ebd-40c7-98b9-7a2507291fc2",
-    tags: ["HTML", "CSS", "JavaScirpt"],
+    tags: ["HTML", "CSS", "JavaScript"],
     category: "web app",
     github: "https://github.com/Faizbaku/TKJ",
     webapp: "https://11tkj.netlify.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -384,13 +416,13 @@ export const projects = [
       "Website untuk menghitung jumlah pengeluaran usaha rental ps",
     image:
       "https://files.catbox.moe/h3udmc.png",
-    tags: ["React Js", "tailwind"],
+    tags: ["React Js", "Tailwind CSS"],
     category: "web app",
     github: "",
     webapp: "https://prgkeuangan.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -404,13 +436,13 @@ export const projects = [
       "Website Regis untuk sebuah Fun Bike Contest Vol 1 dari 5TL MAKASSAR",
     image:
       "https://files.catbox.moe/l3yrad.png",
-    tags: ["React Js", "tailwind"],
+    tags: ["React Js", "Tailwind CSS"],
     category: "web app",
     github: "",
     webapp: "https://contestvol1.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -430,7 +462,7 @@ export const projects = [
     webapp: "https://regulasivol1.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -450,7 +482,7 @@ export const projects = [
     webapp: "https://ipsubcalcu.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -470,7 +502,7 @@ export const projects = [
     webapp: "https://xoraps.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
@@ -490,12 +522,93 @@ export const projects = [
     webapp: "https://kuzuroken.vercel.app/",
     member: [
       {
-        name: "Baku",
+        name: "Kuzuroken",
         img: "https://files.catbox.moe/aq5f76.gif",
         github: "https://github.com/Faizbaku",
       },
     ],
   },
+  {
+    id: 17,
+    title: "Invoice PRG",
+    date: "12 Maret 2026",
+    description:
+      "Sebuah invoice dibuat melalui website yang hanya membutuhkan beberapa input agar menjadi invoice untuk usaha rental PS, khusus untuk Playstation Racing Game Makassar.",
+    image: "https://files.catbox.moe/i8vt0d.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    category: "web app",
+    github: "https://github.com/Faizbaku",
+    webapp: "https://invoiceprg.vercel.app/",
+    member: [
+      {
+        name: "Kuzuroken",
+        img: "https://files.catbox.moe/aq5f76.gif",
+        github: "https://github.com/Faizbaku",
+      },
+    ],
+  },
+  {
+    id: 18,
+    title: "PRG Rental",
+    date: "20 Maret 2026",
+    description:
+      "Sebuah website rental PS yang berisi informasi harga dan memungkinkan pelanggan memesan melalui website.",
+    image: "https://files.catbox.moe/azsevr.png",
+    tags: ["TypeScript", "Tailwind CSS", "Vite"],
+    category: "web app",
+    github: "https://github.com/Faizbaku",
+    webapp: "https://prgrental.vercel.app/",
+    member: [
+      {
+        name: "Kuzuroken",
+        img: "https://files.catbox.moe/aq5f76.gif",
+        github: "https://github.com/Faizbaku",
+      },
+    ],
+  },
+  {
+    id: 19,
+    title: "UKK TKJ",
+    date: "10 April 2026",
+    description:
+      "Sebuah website untuk memperlihatkan materi paket 4 untuk TKJ agar mudah memahami materi dari UKK-nya.",
+    image: "https://files.catbox.moe/9s1d9w.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    category: "web app",
+    github: "https://github.com/Faizbaku",
+    webapp: "https://ukktkj.vercel.app/",
+    member: [
+      {
+        name: "Kuzuroken",
+        img: "https://files.catbox.moe/aq5f76.gif",
+        github: "https://github.com/Faizbaku",
+      },
+    ],
+  },
+];
+
+export const certificates = [
+  {
+    id: 0,
+    title: "PKL CV. Kokendra Perkasa",
+    date: "Juli 2025",
+    image: "https://files.catbox.moe/d1cpu3.jpg",
+    image2: "https://files.catbox.moe/94y49d.jpg",
+    description: "Sertifikasi untuk menyelesaikan PKL yang posisi nya di sana sebagai Helper Admin dan Helper Teknisi di Lapangan",
+    issuer: "Cisco",
+    tags: ["Helper Teknisi", "Helper Admin"],
+    category: "certificate"
+  },
+  {
+    id: 1,
+    title: "Ongoing UKK TKJ",
+    date: "Jan 2025",
+    image: "https://files.catbox.moe/aq5f76.gif", // Placeholder
+    description: "UKK TKJ Paket 4 seputar configuration Mikrotik",
+    issuer: "Udemy",
+    tags: ["TKJ"],
+    category: "certificate"
+  }
 ];
 
 export const TimeLineData = [

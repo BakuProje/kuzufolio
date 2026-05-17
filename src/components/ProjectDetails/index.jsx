@@ -1,4 +1,4 @@
-import { ArrowBackRounded, GitHub, Launch, CodeRounded, LayersRounded } from '@mui/icons-material';
+import { ArrowBackRounded, GitHub, Launch } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -346,76 +346,6 @@ const SecondaryButton = styled.a`
   &:hover {
     background: rgba(32, 40, 78, 0.95);
     color: #FFFFFF;
-  }
-`;
-
-const StatsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 100%;
-`;
-
-const StatCard = styled.div`
-  background: rgba(22, 28, 58, 0.75);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border: 1px solid rgba(120, 160, 255, 0.18);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
-
-  @media (max-width: 960px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 22px 16px;
-    gap: 10px;
-  }
-`;
-
-const StatIconCircle = styled.div`
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: rgba(0, 106, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #7AB4FF;
-  flex-shrink: 0;
-
-  @media (max-width: 960px) {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 4px;
-  }
-`;
-
-const StatValue = styled.div`
-  font-size: 22px;
-  font-weight: 800;
-  color: #E8ECFF;
-  line-height: 1;
-
-  @media (max-width: 960px) {
-    font-size: 28px;
-    margin: 4px 0;
-  }
-`;
-
-const StatLabel = styled.div`
-  font-size: 13px;
-  font-weight: 600;
-  color: #9BA8D4;
-  margin-top: 4px;
-
-  @media (max-width: 960px) {
-    margin-top: 0;
-    font-size: 14px;
   }
 `;
 

@@ -22,10 +22,6 @@ const Body = styled.div`
   z-index: 1;
 `
 
-const Wrapper = styled.div`
-  width: 100%;
-  background: transparent;
-`
 function App() {
   const [darkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
